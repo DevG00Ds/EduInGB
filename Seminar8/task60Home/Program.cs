@@ -19,36 +19,3 @@ int x = ReadNumber("Введите кардинату X :");
 int y = ReadNumber("Введите кардинату Y :");
 int z = ReadNumber("Введите кардинату Z : ");
 
-void GetMatrix(int [,,] array3D)
-{
-    int[,,] matrix3D = new int [x,y,z];
-    
-    for ( int i = 0; i < array3D.GetLength(0); i++)
-    {
-        for (int j = 0; j< array3D.GetLength(1); j++)
-        {
-            Console.Write($" X ({i}) Y ({j})");
-            
-            for ( int k = 0; k < array3D.GetLength(2); k++)
-            {
-                Console.Write($" Z ({k})={array3D[i,j,k]}");
-            }
-            Console.WriteLine();
-        }
-        Console.WriteLine();
-    }
-}
-
-void PrintMatrix(int[,] matrix)
-{
-    for (int i = 0; i < matrix.GetLength(0); i++)
-    {
-        for (int j = 0; j < matrix.GetLength(1); j++)
-        {
-            Console.Write(matrix[i, j] + " ");
-        }
-        Console.WriteLine();
-    }
-}
-
-PrintMatrix();
